@@ -1,0 +1,44 @@
+<resources>
+
+    <!--Base Theme-->
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light">
+        <!--no actionbar and title-->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!--action bar color
+        <item name="colorPrimary">@color/colorPrimary</item>
+        -->
+        <!--status bar color
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        -->
+        <!--window background-->
+        <item name="android:windowBackground">@color/colorCommentBackground</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Normal application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base">
+        <item name="actionBarStyle">@style/ActionBarStyle</item>
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:listDivider">@drawable/divider</item >
+    </style>
+
+    <!-- 设置标题栏样式 -->
+    <style name="ActionBarStyle" parent="Widget.AppCompat.Light.ActionBar">
+        <item name="titleTextStyle">@style/ActionBarTitleStyle</item>
+    </style>
+
+    <!-- 标题栏文字样式 -->
+    <style name="ActionBarTitleStyle" parent="Base.TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">@dimen/action_bar_title_text_size</item>
+        <item name="android:textColor">@color/action_bar_title_text_color</item>
+    </style>
+
+    <style name="AppTheme.Fullscreen" parent="Theme.AppCompat.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+</resources>

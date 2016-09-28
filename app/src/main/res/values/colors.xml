@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e62f17</color>
+    <color name="colorPrimaryDark">#e62f17</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorCommentBackground">#FFFFFF</color>
+
+    <color name="retry_button_background">#30000000</color>
+    <color name="retry_button_background_stroke">#50000000</color>
+
+    <!-- ActionBar标题颜色 -->
+    <color name="action_bar_title_text_color">#FFFFFF</color>
+
+
+    <color name="version_text_color">#c2c2c2</color>
+
+    <color name="tool_bar_color">#e62f17</color>
+
+    <color name="tool_bar_text_color">#ffffff</color>
+
+    <color name="sub_fragment_bg">#fbf7f3</color>
+
+    <color name="item_text_color">#666666</color>
+
+    <color name="item_line_color">#dfdbdb</color>
+
+    <color name="transparent">#00000000</color>
+
+
+</resources>

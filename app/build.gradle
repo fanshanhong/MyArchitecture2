@@ -1,0 +1,87 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt' // 注释处理
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.exam.myarchitecture"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        debug {
+            // 调试时候, 也使用正式的签名
+            // signingConfig signingConfigs.release
+
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+        }
+
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+
+    // Dagger
+    provided 'javax.annotation:javax.annotation-api:1.2'
+    compile 'com.google.dagger:dagger:2.0.2'
+    provided 'javax.annotation:jsr250-api:1.0'
+    apt 'com.google.dagger:dagger-compiler:2.0.2'
+    //必须配置，dagger缺少 javax.annotation包
+    provided 'org.projectlombok:lombok:1.16.2'
+
+    // Logger
+    compile 'com.orhanobut:logger:1.15'
+
+    // Gson
+    compile 'com.google.code.gson:gson:2.2.4'
+
+    // ButterKnife
+    compile 'com.jakewharton:butterknife:7.0.1'
+
+    // Fresco
+    compile 'com.facebook.fresco:fresco:0.10.0'
+
+    // EventBus
+    compile 'org.greenrobot:eventbus:3.0.0'
+
+    //annotation
+    compile 'com.android.support:support-annotations:23.4.0'
+
+    //recycle view
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+
+    //Retrofit + Rxjava + okhttp
+    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
+    // Retrofit网络处理
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
+    // Retrofit的rx解析库
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
+    // Retrofit的gson库
+    compile 'io.reactivex:rxandroid:1.1.0'
+    // RxAndroid
+    compile 'io.reactivex:rxjava:1.1.0'
+    // 推荐同时加载RxJava
+    compile 'com.squareup.okhttp3:okhttp:3.3.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.1.2'
+
+    // LeakCanary  内存泄漏检测
+    compile 'com.squareup.leakcanary:leakcanary-watcher:1.4-beta2'
+    compile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
+
+    //sdk
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.android.support:support-v13:23.4.0'
+    compile 'com.android.support:appcompat-v7'
+
+}

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MyArchitecture</string>
+
+    <string name="login_success">登录成功</string>
+
+    <string name="please_check_network_connection">请检查网络连接</string>
+
+    <string name="emdt_host_empty">服务地址有误</string>
+
+    <string name="title_string">MyArchitecture</string>
+
+    <string name="refresh">刷新</string>
+</resources>
